@@ -1,0 +1,285 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body dan font dasar */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #f44336, #4caf50); /* Merah & Hijau */
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  font-size: 3em;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header .banner h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+header .banner p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+header .countdown p {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+header #timer {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: gold;
+}
+
+/* Logo */
+header .logo img {
+  width: 150px;
+  margin-top: 20px;
+}
+
+/* Navigasi */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav ul li a:hover {
+  color: #f44336;
+}
+
+/* Katalog Produk */
+#katalog {
+  padding: 50px 20px;
+  background-color: #f1f1f1;
+}
+
+#katalog h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.galeri {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.produk {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+}
+
+.produk img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.produk:hover img {
+  transform: scale(1.1);
+}
+
+.harga-asli {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.harga-diskon {
+  color: #f44336;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Testimoni */
+#testimoni {
+  background-color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#testimoni h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slide {
+  max-width: 600px;
+  margin: 0 15px;
+}
+
+.slide p {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.slide h4 {
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #777;
+}
+
+/* Lokasi Toko */
+#lokasi {
+  background-color: #f1f1f1;
+  padding: 50px 20px;
+}
+
+#lokasi h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.cabang {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cabang-item {
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cabang-item h3 {
+  font-size: 1.5em;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.cabang-item p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+footer .sosial {
+  margin-top: 20px;
+}
+
+footer .ikon {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer .ikon img {
+  width: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer .ikon:hover img {
+  transform: rotate(360deg);
+  filter: brightness(1.5);
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .galeri {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produk {
+    width: 80%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  header .banner h1 {
+    font-size: 2em;
+  }
+
+  header #timer {
+    font-size: 2em;
+  }
+
+  footer p {
+    font-size: 1em;
+  }
+
+  footer .ikon img {
+    width: 25px;
+  }
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
